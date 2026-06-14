@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张小明 - 高级前端工程师</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131f;
+      --primary: #6c63ff;
+      --primary-glow: rgba(108, 99, 255, 0.4);
+      --accent: #00d4aa;
+      --text: #e8e8f0;
+      --text-muted: #9898b0;
+      --border: rgba(255,255,255,0.06);
+      --radius: 16px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== Animated Background ===== */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .bg-orb {
+      position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.15; z-index: 0; pointer-events: none;
+      animation: float 20s infinite ease-in-out;
+    }
+    .bg-orb--1 { width: 500px; height: 500px; background: var(--primary); top: -200px; left: -100px; animation-delay: 0s; }
+    .bg-orb--2 { width: 400px; height: 400px; background: var(--accent); bottom: -150px; right: -100px; animation-delay: -10s; }
+    .bg-orb--3 { width: 300px; height: 300px; background: #ff6b9d; top: 40%; left: 50%; animation-delay: -5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(60px, -40px) scale(1.1); }
+      50% { transform: translate(-20px, -80px) scale(0.95); }
+      75% { transform: translate(-50px, 20px) scale(1.05); }
+    }
+
+    /* ===== Layout ===== */
+    .container { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== Hero ===== */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; z-index: 1;
+    }
+    .hero__avatar {
+      width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 28px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.2rem; font-weight: 700; color: #fff;
+      box-shadow: 0 0 60px var(--primary-glow);
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 60px var(--primary-glow); }
+      50% { box-shadow: 0 0 100px rgba(108, 99, 255, 0.7); }
+    }
+    .hero__name {
+      font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -1px;
+      background: linear-gradient(135deg, #fff 0%, var(--primary) 50%, var(--accent) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero__title {
+      font-size: 1.2rem; color: var(--text-muted); margin: 12px 0 8px; font-weight: 400;
+    }
+    .hero__tagline { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; }
+    .hero__scroll {
+      display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted);
+      text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;
+      transition: var(--transition);
+    }
+    .hero__scroll:hover { color: var(--primary); }
+    .hero__scroll-arrow {
+      width: 24px; height: 24px; border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor; transform: rotate(45deg);
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translate(0, 0); }
+      50% { transform: rotate(45deg) translate(4px, 4px); }
+    }
+
+    /* ===== Section ===== */
+    .section { padding: 80px 0; position: relative; z-index: 1; }
+    .section__label {
+      display: inline-block; font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 3px; color: var(--primary); margin-bottom: 12px;
+      padding: 4px 12px; border: 1px solid rgba(108, 99, 255, 0.3);
+      border-radius: 99px; background: rgba(108, 99, 255, 0.08);
+    }
+    .section__title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; margin-bottom: 40px;
+    }
+
+    /* ===== Cards ===== */
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 28px; margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(108, 99, 255, 0.25);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    /* ===== Experience Timeline ===== */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+    }
+    .timeline__item { padding-left: 32px; position: relative; margin-bottom: 48px; }
+    .timeline__item:last-child { margin-bottom: 0; }
+    .timeline__dot {
+      position: absolute; left: -5px; top: 4px; width: 12px; height: 12px;
+      border-radius: 50%; background: var(--primary);
+      box-shadow: 0 0 12px var(--primary-glow);
+    }
+    .timeline__date {
+      font-size: 0.8rem; color: var(--primary); font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 6px;
+    }
+    .timeline__role { font-size: 1.2rem; font-weight: 700; margin-bottom: 2px; }
+    .timeline__company { color: var(--accent); font-weight: 500; margin-bottom: 10px; }
+    .timeline__desc { color: var(--text-muted); font-size: 0.95rem; }
+
+    .timeline__desc li { margin-bottom: 6px; position: relative; padding-left: 16px; }
+    .timeline__desc li::before {
+      content: '▸'; position: absolute; left: 0; color: var(--primary); font-size: 0.75rem;
+    }
+
+    /* ===== Skills ===== */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;
+    }
+    .skill-category h3 {
+      font-size: 1rem; color: var(--accent); margin-bottom: 14px; font-weight: 600;
+    }
+    .skill-bar {
+      margin-bottom: 14px;
+    }
+    .skill-bar__label {
+      display: flex; justify-content: space-between;
+      font-size: 0.88rem; margin-bottom: 4px;
+    }
+    .skill-bar__track {
+      height: 6px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden;
+    }
+    .skill-bar__fill {
+      height: 100%; border-radius: 99px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      animation: fill-bar 1.2s ease-out forwards; transform-origin: left;
+    }
+    .skill-bar__fill--90 { width: 90%; }
+    .skill-bar__fill--85 { width: 85%; }
+    .skill-bar__fill--80 { width: 80%; }
+    .skill-bar__fill--75 { width: 75%; }
+    .skill-bar__fill--70 { width: 70%; }
+    .skill-bar__fill--88 { width: 88%; }
+    .skill-bar__fill--92 { width: 92%; }
+    .skill-bar__fill--82 { width: 82%; }
+
+    @keyframes fill-bar {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* ===== Projects ===== */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;
+    }
+    .project-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px;
+      transition: var(--transition);
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(108, 99, 255, 0.25);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .project-card__icon { font-size: 2rem; margin-bottom: 12px; }
+    .project-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px; }
+    .project-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 0.7rem; padding: 3px 10px; border-radius: 99px;
+      background: rgba(108, 99, 255, 0.12); color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* ===== Contact ===== */
+    .contact-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .contact-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 24px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--text); text-decoration: none;
+      transition: var(--transition);
+    }
+    .contact-link:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 24px rgba(108, 99, 255, 0.15);
+    }
+    .contact-link__icon { font-size: 1.3rem; }
+
+    /* ===== Footer ===== */
+    .footer {
+      text-align: center; padding: 40px 24px;
+      color: var(--text-muted); font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== Fade-in on scroll ===== */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .section { padding: 60px 0; }
+      .hero { min-height: 90vh; }
+      .contact-links { flex-direction: column; align-items: stretch; }
+      .contact-link { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-orb bg-orb--1"></div>
+  <div class="bg-orb bg-orb--2"></div>
+  <div class="bg-orb bg-orb--3"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__avatar">张</div>
+      <h1 class="hero__name">张小明</h1>
+      <p class="hero__title">高级前端工程师 · Full-Stack Developer</p>
+      <p class="hero__tagline">5年经验 · 专注用户体验与高性能Web应用</p>
+      <a href="#about" class="hero__scroll">
+        了解更多 <span class="hero__scroll-arrow"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <span class="section__label">About</span>
+      <h2 class="section__title">关于我</h2>
+      <div class="card reveal">
+        <p>资深前端工程师，拥有5年Web全栈开发经验。擅长React/Vue生态、TypeScript以及Node.js后端开发。热衷于构建高性能、可维护的前端架构，并对用户体验有着执着的追求。</p>
+        <p style="margin-top:12px;">目前在 <strong>某科技有限公司</strong> 担任前端技术负责人，带领4人团队负责公司核心产品的架构设计与开发。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <span class="section__label">Experience</span>
+      <h2 class="section__title">工作经历</h2>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2024.03 - 至今</div>
+          <div class="timeline__role">前端技术负责人</div>
+          <div class="timeline__company">某科技有限公司</div>
+          <ul class="timeline__desc">
+            <li>主导公司核心SaaS产品前端架构重构，性能提升40%</li>
+            <li>搭建组件库与设计系统，覆盖30+业务组件</li>
+            <li>引入微前端架构，解决多团队协作问题</li>
+            <li>带领4人前端团队，制定技术规划与代码规范</li>
+          </ul>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2022.06 - 2024.02</div>
+          <div class="timeline__role">高级前端工程师</div>
+          <div class="timeline__company">某互联网公司</div>
+          <ul class="timeline__desc">
+            <li>负责电商平台前端开发，日活用户50w+</li>
+            <li>实现SSR与边缘缓存方案，首屏加载优化至1.2s</li>
+            <li>设计并落地前端监控体系（错误追踪、性能埋点）</li>
+          </ul>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2021.07 - 2022.05</div>
+          <div class="timeline__role">前端开发工程师</div>
+          <div class="timeline__company">某创业公司</div>
+          <ul class="timeline__desc">
+            <li>从零搭建React+TypeScript项目，独立完成管理后台</li>
+            <li>实现WebSocket实时数据大屏，服务政企客户</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <span class="section__label">Skills</span>
+      <h2 class="section__title">专业技能</h2>
+      <div class="skills-grid">
+        <div class="card reveal">
+          <div class="skill-category">
+            <h3>前端框架</h3>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>React / Next.js</span><span>92%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--92"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Vue / Nuxt</span><span>85%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>TypeScript</span><span>90%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--90"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="skill-category">
+            <h3>后端 & 工具</h3>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Node.js / Express</span><span>88%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--88"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>PostgreSQL / Redis</span><span>80%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Docker / CI/CD</span><span>82%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--82"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="skill-category">
+            <h3>设计 & 其他</h3>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Figma</span><span>80%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Webpack / Vite</span><span>85%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><span>Git / 团队协作</span><span>90%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--90"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <span class="section__label">Projects</span>
+      <h2 class="section__title">项目经验</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-card__icon">🛒</div>
+          <h3>电商SaaS平台</h3>
+          <p>多租户电商解决方案，支持自定义主题与插件扩展，服务300+商家。</p>
+          <div class="project-card__tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-card__icon">📊</div>
+          <h3>实时数据大屏</h3>
+          <p>基于WebSocket的政企数据可视化平台，支持多端自适应与离线导出。</p>
+          <div class="project-card__tags">
+            <span class="tag">React</span>
+            <span class="tag">ECharts</span>
+            <span class="tag">WebSocket</span>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-card__icon">🎨</div>
+          <h3>企业组件库 Starlight</h3>
+          <p>内部设计系统，包含30+组件，覆盖表单、数据展示、导航等场景。</p>
+          <div class="project-card__tags">
+            <span class="tag">Vue 3</span>
+            <span class="tag">Storybook</span>
+            <span class="tag">Vitest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container" style="text-align:center;">
+      <span class="section__label">Contact</span>
+      <h2 class="section__title">联系我</h2>
+      <div class="contact-links reveal">
+        <a href="mailto:zhangxm@example.com" class="contact-link">
+          <span class="contact-link__icon">📧</span> zhangxm@example.com
+        </a>
+        <a href="https://github.com" class="contact-link" target="_blank">
+          <span class="contact-link__icon">💻</span> GitHub
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link__icon">📱</span> 138-0000-0000
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link__icon">📍</span> 北京 · 中国
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 张小明 · Designed & Built with 💜</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Skill bars animate when visible
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.skill-bar__fill').forEach(bar => {
+            bar.style.animation = 'none';
+            bar.offsetHeight; // reflow
+            bar.style.animation = 'fill-bar 1.2s ease-out forwards';
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.card').forEach(card => {
+      if (card.querySelector('.skill-category')) skillObserver.observe(card);
+    });
+  </script>
+</body>
+</html>
