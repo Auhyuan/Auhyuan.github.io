@@ -14,8 +14,62 @@
 @keyframes readerIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}body.modal-open{overflow:hidden}
 @media(max-width:860px){.paper{margin:0}.mast{padding:22px 19px 13px}.mast h1{font-size:38px}.issue{flex-direction:column;gap:3px}.view{padding:22px 19px 44px}.intro,.feed,.hero-card,.section-footer,.watch{grid-template-columns:1fr}.signals{border-left:0;border-top:1px solid var(--rule);padding:12px 0 0}.news-card,.hero-card{grid-template-columns:120px 1fr;gap:14px}.hero-card .card-media{order:0}.hero-card h3,.card-body h3{font-size:23px}.hero-card p,.card-body p{font-size:14px}.overlay{padding:0}.reader{width:100%;max-height:100vh;height:100vh}.reader-inner{padding:22px 19px 45px}.modal-article h1{font-size:31px}.reader-meta strong{margin-left:0}.footer{padding:13px 19px;flex-direction:column;gap:4px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.news-card,.card-media img,.reader{transition:none!important;animation:none!important}}
+
+.market-strip{border-bottom:1px solid var(--rule);background:#eee7db;padding:13px 46px 11px}
+.market-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.market-item{padding:11px 18px 10px;border-right:1px solid var(--rule);min-width:0}
+.market-item:last-child{border-right:0}
+.market-name{font:700 12px/1.2 "PingFang SC","Microsoft YaHei",sans-serif;color:var(--muted);letter-spacing:.3px}
+.market-main{display:flex;align-items:baseline;gap:10px;margin-top:5px;white-space:nowrap}
+.market-price{font:700 27px/1.1 Georgia,"Times New Roman",serif;font-variant-numeric:tabular-nums}
+.market-pct{font:800 14px/1 Arial,sans-serif;font-variant-numeric:tabular-nums}
+.market-change{margin-top:4px;font:12px/1.2 Arial,sans-serif;color:var(--muted);font-variant-numeric:tabular-nums}
+.market-item.up .market-pct,.market-item.up .market-change{color:#a33a31}
+.market-item.down .market-pct,.market-item.down .market-change{color:#2f7a58}
+.market-item.flat .market-pct,.market-item.flat .market-change{color:var(--muted)}
+.market-foot{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:8px;font:11px/1.35 Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--muted)}
+.market-state{display:inline-flex;align-items:center;gap:6px}
+.market-dot{width:7px;height:7px;border-radius:50%;background:#8f877c;display:inline-block}
+.market-state.live .market-dot{background:#a33a31;box-shadow:0 0 0 3px #a33a3118}
+.market-state.error .market-dot{background:#a87532}
+.market-source a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+@media(max-width:860px){
+ .market-strip{padding:11px 19px 10px}
+ .market-grid{grid-template-columns:1fr}
+ .market-item{border-right:0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center}
+ .market-item:last-child{border-bottom:0}
+ .market-main{margin:0}
+ .market-price{font-size:23px}
+ .market-change{margin:0;text-align:right}
+ .market-foot{flex-direction:column;align-items:flex-start;gap:4px}
+}
 </style></head><body><main class="paper">
 <header class="mast"><div class="eyebrow">PERSONAL NEWSROOM · MULTI-SOURCE EDITION</div><h1>Auhyuan 科技与社会日报</h1><div class="issue"><span>2026 年 9 月 21 日 · 星期一</span><span>AI 热点 6 篇 · 社会热点 7 篇</span><span>首页摘要浏览 · 点击进入沉浸式阅读</span></div></header>
+
+<section class="market-strip" aria-label="A股主要指数近实时行情">
+  <div class="market-grid">
+    <div class="market-item flat" data-market-code="000001">
+      <div class="market-name">上证指数 <small>000001</small></div>
+      <div class="market-main"><span class="market-price">--</span><span class="market-pct">--</span></div>
+      <div class="market-change">涨跌额 --</div>
+    </div>
+    <div class="market-item flat" data-market-code="000300">
+      <div class="market-name">沪深300 <small>000300</small></div>
+      <div class="market-main"><span class="market-price">--</span><span class="market-pct">--</span></div>
+      <div class="market-change">涨跌额 --</div>
+    </div>
+    <div class="market-item flat" data-market-code="399006">
+      <div class="market-name">创业板指 <small>399006</small></div>
+      <div class="market-main"><span class="market-price">--</span><span class="market-pct">--</span></div>
+      <div class="market-change">涨跌额 --</div>
+    </div>
+  </div>
+  <div class="market-foot">
+    <span id="marketState" class="market-state"><span class="market-dot"></span><span class="market-state-text">行情初始化中</span></span>
+    <span id="marketUpdated">等待首次更新</span>
+    <span class="market-source">数据：<a href="https://quote.eastmoney.com/" target="_blank" rel="noopener">东方财富</a> · 近实时展示，非交易所授权实时行情</span>
+  </div>
+</section>
 <nav class="tabs"><button class="tab active" data-target="ai">AI 热点资讯 <small>6</small></button><button class="tab" data-target="society">社会热点资讯 <small>7</small></button></nav>
 <section id="ai" class="view active ai-view"><div class="intro"><div><div class="kicker">AI EDITION</div><h2>AI 热点资讯</h2><p>今天不追求把页面塞满，而是围绕 <b>Decision Model、模型路由、Coding Agent 验证、Agent 监控、实时语音与持续学习</b> 六条真正有结构意义的信号。首页只保留摘要，感兴趣后再点开深读。</p></div><div class="signals"><b>今日 AI 三个信号</b><ul><li>Agent 开始按任务分层用模型</li><li>监控、Review、Eval 成为 Runtime 核心</li><li>持续学习与实时交互进入工程化阶段</li></ul></div></div><div class="feed"><article class="news-card hero-card" tabindex="0" role="button" data-id="ai-jev">
  <div class="card-media"><img loading="lazy" src="https://api.microlink.io/?url=https%3A%2F%2Fvercel.com%2Fblog%2Fai-gateway-jev-model-launch&embed=image.url" alt="Jev 的热度没有停在发布当天：它正在验证“Agent 不该每一步都调用 LLM”这条路线" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="card-fallback"><svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg"><rect width="1000" height="560" fill="#ece5da"/><circle cx="825" cy="155" r="115" fill="#244f77" opacity=".12"/><circle cx="825" cy="155" r="70" fill="#244f77" opacity=".2"/><path d="M0 465C170 400 300 485 455 390S760 320 1000 175" fill="none" stroke="#244f77" stroke-width="8"/><text x="65" y="190" font-family="Georgia,serif" font-size="54" font-weight="700" fill="#171512">模型 / Agent / 新范式</text><line x1="70" y1="245" x2="605" y2="245" stroke="#171512" stroke-width="2"/><text x="70" y="300" font-family="Arial,sans-serif" font-size="20" letter-spacing="2" fill="#244f77">AUHYUAN DAILY · EDITORIAL INFOGRAPHIC</text></svg></div></div>
@@ -165,4 +219,104 @@ function move(d){if(!currentId)return;let i=storyIds.indexOf(currentId);i=(i+d+s
 document.getElementById('prev').onclick=()=>move(-1);document.getElementById('next').onclick=()=>move(1);
 document.addEventListener('keydown',e=>{if(!overlay.classList.contains('open'))return;if(e.key==='Escape')closeStory();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);});
 activateTab(location.hash.replace('#','')||'ai',false);window.addEventListener('hashchange',()=>activateTab(location.hash.replace('#',''),false));
+
+(function(){
+  const SECIDS='1.000001,1.000300,0.399006';
+  const API='https://push2.eastmoney.com/api/qt/ulist.np/get';
+  const FIELDS='f2,f3,f4,f12,f14,f124';
+  const UT='fa5fd1943c7b386f172d6893dbbd1d0c';
+  let timer=null, inflight=null, seq=0, lastOK=0;
+
+  function chinaNow(){
+    const parts=new Intl.DateTimeFormat('en-CA',{
+      timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',
+      weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'
+    }).formatToParts(new Date());
+    const v={}; parts.forEach(p=>v[p.type]=p.value);
+    return {weekday:v.weekday,h:+v.hour,m:+v.minute,s:+v.second};
+  }
+  function tradingNow(){
+    const t=chinaNow();
+    if(t.weekday==='Sat'||t.weekday==='Sun') return false;
+    const mins=t.h*60+t.m;
+    return (mins>=570&&mins<=690)||(mins>=780&&mins<=900);
+  }
+  function nextDelay(){ return tradingNow()?5000:60000; }
+  function fmt(n,d=2){
+    const x=Number(n);
+    return Number.isFinite(x)?x.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d}):'--';
+  }
+  function render(row){
+    if(!row) return;
+    const el=document.querySelector('[data-market-code="'+row.f12+'"]');
+    if(!el) return;
+    const price=Number(row.f2), pct=Number(row.f3), change=Number(row.f4);
+    if(Number.isFinite(price)) el.querySelector('.market-price').textContent=fmt(price,2);
+    if(Number.isFinite(pct)){
+      const sign=pct>0?'+':'';
+      el.querySelector('.market-pct').textContent=(pct>0?'↑ ':pct<0?'↓ ':'')+sign+fmt(pct,2)+'%';
+      el.classList.remove('up','down','flat');
+      el.classList.add(pct>0?'up':pct<0?'down':'flat');
+    }
+    if(Number.isFinite(change)){
+      const sign=change>0?'+':'';
+      el.querySelector('.market-change').textContent='涨跌额 '+sign+fmt(change,2);
+    }
+  }
+  function setState(kind,text){
+    const el=document.getElementById('marketState');
+    if(!el) return;
+    el.classList.remove('live','error');
+    if(kind) el.classList.add(kind);
+    const txt=el.querySelector('.market-state-text'); if(txt) txt.textContent=text;
+  }
+  function cleanup(){
+    if(inflight&&inflight.parentNode) inflight.parentNode.removeChild(inflight);
+    inflight=null;
+  }
+  function schedule(){
+    clearTimeout(timer);
+    timer=setTimeout(load,nextDelay());
+  }
+  function load(){
+    if(document.hidden){ schedule(); return; }
+    cleanup();
+    const cb='__auhyuanMarketCb_'+Date.now()+'_'+(++seq);
+    window[cb]=function(payload){
+      try{
+        const rows=payload&&payload.data&&payload.data.diff;
+        if(Array.isArray(rows)&&rows.length){
+          rows.forEach(render);
+          lastOK=Date.now();
+          const time=new Intl.DateTimeFormat('zh-CN',{
+            timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'
+          }).format(new Date());
+          document.getElementById('marketUpdated').textContent='更新于 '+time+' · '+(tradingNow()?'5 秒刷新':'非交易时段 60 秒刷新');
+          setState(tradingNow()?'live':'','交易中');
+          if(!tradingNow()) setState('','非交易时段');
+        }else{
+          throw new Error('empty market data');
+        }
+      }catch(e){
+        setState('error','行情暂时不可用 · 保留上一笔数据');
+      }finally{
+        try{delete window[cb]}catch(e){window[cb]=undefined}
+        cleanup(); schedule();
+      }
+    };
+    const s=document.createElement('script');
+    inflight=s;
+    s.async=true;
+    s.onerror=function(){
+      try{delete window[cb]}catch(e){window[cb]=undefined}
+      cleanup();
+      setState('error',lastOK?'行情更新失败 · 保留上一笔数据':'行情暂时不可用');
+      schedule();
+    };
+    s.src=API+'?fltt=2&invt=2&fields='+encodeURIComponent(FIELDS)+'&secids='+encodeURIComponent(SECIDS)+'&ut='+encodeURIComponent(UT)+'&cb='+encodeURIComponent(cb)+'&_='+Date.now();
+    document.head.appendChild(s);
+  }
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden){clearTimeout(timer);load();}});
+  load();
+})();
 </script></body></html>
