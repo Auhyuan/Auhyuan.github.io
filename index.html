@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Auhyuan 科技与社会日报，筛选值得理解的技术、产业、政策与社会变化。">
-<title>Auhyuan 科技与社会日报 · 2026.09.30</title>
+<title>Auhyuan 科技与社会日报 · 2026.10.01</title>
 <style>
 :root{--paper:#f4efe4;--ink:#181714;--muted:#746f65;--line:#bdb4a4;--accent:#9b3024;--green:#287451;--shadow:0 16px 38px rgba(31,25,18,.13)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#ded8cc;color:var(--ink);font-family:"Noto Serif SC","Songti SC","STSong",Georgia,serif;line-height:1.72}body.lock{overflow:hidden}
@@ -24,7 +24,7 @@ footer{text-align:center;border-top:1px solid var(--ink);margin-top:42px;padding
 <main class="paper">
   <header class="masthead">
     <h1>Auhyuan 科技与社会日报</h1>
-    <div class="deck"><span>技术如何改变产业，制度如何改变生活</span><span>2026 年 9 月 30 日 · 星期三</span><span>科技 4 篇 · 社会 4 篇</span></div>
+    <div class="deck"><span>技术如何改变产业，制度如何改变生活</span><span>2026 年 10 月 1 日 · 星期四</span><span>科技 4 篇 · 社会 4 篇</span></div>
   </header>
 
   <section class="ticker" aria-label="A股主要指数近实时行情">
@@ -44,65 +44,55 @@ footer{text-align:center;border-top:1px solid var(--ink);margin-top:42px;padding
 
 
   <section id="ai" class="panel active">
-    <div class="section-kicker"><span>TECHNOLOGY &amp; INDUSTRY</span><h2>Agent 从“能行动”走向“可持续运行”</h2><p>今天的增量集中在三层：长期在线的 Agent 产品形态、面向量子时代的信任基础设施，以及把企业系统元数据带进代码治理的工程能力。</p></div>
+    <div class="section-kicker"><span>TECHNOLOGY &amp; INDUSTRY</span><h2>竞争重心从模型参数移向软件栈、供给锁定与运行控制面</h2><p>今天真正值得关注的不是又一轮宣传性发布，而是四个可验证变化：推理痕迹成为安全边界，国产 AI 芯片获得更高层编程入口，HBM 产能被长期合同锁定，Agent 基础设施开始同时处理隔离、路由与付费。</p></div>
     <div class="grid">
       <article class="card hero" tabindex="0" data-story="t1">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://devday.openai.com/" alt="OpenAI DevDay 2026" onerror="fallback(this,'OpenAI DevDay 2026')"></div>
-        <div class="card-copy"><span class="label">AI · ALWAYS-ON AGENT</span><h3>OpenAI 用 Dots 把 Agent 从一次对话变成持续运行的工作单元</h3><p class="summary">OpenAI 在 9 月 29 日 DevDay 发布 Dots、GPT-6.1 Sol、ChatGPT Space 与 Decisions API。Dots 拥有独立云端电脑，可跨应用持续执行目标；Sol 则把接近旗舰模型的能力压到更低价格。产品重心由“回答一次”转向“长期负责一件事”。</p><div class="meta">OpenAI · Reuters · Axios · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://openai.com/news/" alt="AI Model Security" onerror="fallback(this,'AI Model Security')"></div>
+        <div class="card-copy"><span class="label">AI SECURITY · MODEL EXTRACTION</span><h3>OpenAI 披露大规模“对抗性蒸馏”：模型交互层本身已成为攻击面</h3><p class="summary">OpenAI 9 月 30 日称，7 月发现一场试图提取受保护推理痕迹的协同行动，高峰两天出现约 1.6 万次相关请求。公司强调这不是数据库泄露，并只将核心活动簇归因于与 Moonshot AI 有关联的个人；公开材料尚不能证明某个已发布模型使用了这些数据。</p><div class="meta">OpenAI · 独立安全报道 · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
       <article class="card" tabindex="0" data-story="t2">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://blog.cloudflare.com/cloudflare-certificate-authority/" alt="Cloudflare 后量子证书机构" onerror="fallback(this,'Post-Quantum CA')"></div>
-        <div class="card-copy"><span class="label">SECURITY · WEB PKI</span><h3>Cloudflare 申请成为公共 CA，并把后量子证书推向浏览器信任链</h3><p class="summary">Cloudflare 宣布建设公共证书机构，计划 2027 年第一季度签发首批 Merkle Tree Certificates，并争取进入 Chrome 的抗量子根证书库。它试图解决后量子签名体积过大、证书透明日志快速膨胀等现实部署问题。</p><div class="meta">Cloudflare · IETF 草案 · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://github.com/tile-ai/tilelang" alt="TileLang on Ascend" onerror="fallback(this,'TileLang on Ascend')"></div>
+        <div class="card-copy"><span class="label">AI CHIPS · OPEN SOURCE</span><h3>DeepSeek 与华为把 Ascend 950 的计算、通信与 TileLang 工具链开源</h3><p class="summary">双方围绕 128 颗 Ascend 950 的超节点共同优化计算与通信，并为 TileLang 增加原生后端。增量不只是“适配国产芯片”，而是尝试用高层语言降低手写内核门槛，让算子开发摆脱对 CUDA 编程模型的单一依赖。</p><div class="meta">DeepSeek · TileLang · Reuters · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
       <article class="card" tabindex="0" data-story="t3">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties/" alt="GitHub 外部自定义属性" onerror="fallback(this,'GitHub Governance')"></div>
-        <div class="card-copy"><span class="label">DEVOPS · GOVERNANCE</span><h3>GitHub 允许 CMDB 成为仓库属性的唯一事实源</h3><p class="summary">External custom properties 进入公开预览：企业可把所有者、服务等级、生命周期与合规状态从 CMDB 或内部开发者门户同步到 GitHub，属性在界面只读，却可用于仓库筛选和 ruleset 定向。治理信息不必再复制维护。</p><div class="meta">GitHub Changelog · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://investors.micron.com/" alt="Micron AI Memory" onerror="fallback(this,'Micron AI Memory')"></div>
+        <div class="card-copy"><span class="label">SEMICONDUCTOR · MEMORY</span><h3>美光季度收入近四倍增长，客户用 320 亿美元承诺提前锁定内存</h3><p class="summary">美光第四财季收入达 542.3 亿美元，长期供货协议中的客户财务承诺由 6 月的 220 亿美元升至 320 亿美元，多数以现金押金形式存在；公司称 2027 年大部分 HBM 产出已签约。AI 基建的瓶颈正从 GPU 延伸到内存与扩产周期。</p><div class="meta">Micron · Reuters · WSJ · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
       <article class="card" tabindex="0" data-story="t4">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/sep/0929-ultium-cells-lmr-tennessee.html" alt="GM 与 LG LMR 方形电池" onerror="fallback(this,'LMR Battery')"></div>
-        <div class="card-copy"><span class="label">BATTERY · INDUSTRIALIZATION</span><h3>GM 与 LG 把 LMR 方形电池路线送进田纳西工厂改造</h3><p class="summary">Ultium Cells 将于 2026 年内启动产线改造，为未来 GM 电动车制造富锂锰方形电芯。今天的新信息不是化学体系概念，而是具体工厂与量产准备：目标是在接近磷酸铁锂成本下提高能量密度，并减少电池包零件。</p><div class="meta">General Motors · Reuters · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://blog.cloudflare.com/agentic-web/" alt="Cloudflare Agent Web" onerror="fallback(this,'Cloudflare Agent Web')"></div>
+        <div class="card-copy"><span class="label">AGENT INFRA · CONTROL PLANE</span><h3>Cloudflare 同日补齐 Agent 的沙箱、模型路由与按调用付费</h3><p class="summary">Cloudflare 将 Containers 重构为更快启动的 Agent 沙箱，推出按请求复杂度选模型的 Auto Router，并用 HTTP 402 测试让网站、API 与 MCP 工具向 Agent 收费。三项更新合在一起，显示 Agent 平台开始从“能调用工具”走向可控成本与可结算运行。</p><div class="meta">Cloudflare · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
     </div>
-    <aside class="closing">
-      <div><h3>今日科技趋势</h3><p>Agent 产品开始占用独立计算环境、持续保存目标并跨应用执行，随之而来的不是单纯模型竞赛，而是权限、治理和信任链的整体升级。与此同时，后量子证书和新型电池都进入“从方案走向基础设施”的阶段。</p></div>
-      <div><h3>今天最值得亲自尝试</h3><p>如果团队已有 CMDB 或内部开发者门户，可在测试组织评估 GitHub external custom properties：先同步 owner、lifecycle、tier 三个只读字段，再用 ruleset 验证是否能自动覆盖不同等级仓库。</p><h3>3 个后续信号</h3><ul><li>Dots 在长时间运行中的授权、审计和人工接管机制。</li><li>MTC 是否按计划进入浏览器根证书库并形成跨 CA 互操作。</li><li>LMR 产线改造后的良率、循环寿命和实际成本。</li></ul></div>
-    </aside>
+    <aside class="closing"><div><h3>今日科技趋势</h3><p>今天的共同线索是控制面上移：模型公司保护中间推理状态，芯片生态争夺编程语言与通信库，内存厂用长期合同管理供给，边缘平台则统一沙箱、路由和支付。模型能力仍重要，但能否安全、经济地长期运行，正在决定产品化速度。</p></div><div><h3>今天最值得亲自尝试</h3><p>TileLang 已开放 Ascend 950 后端。具备国产算力环境的开发者，可从仓库中的 GEMM 或 FlashAttention 示例开始，对比同一算子在高层描述、生成代码与性能分析上的差异；没有对应硬件时，不必为了追热点强行部署。</p><h3>3 个后续信号</h3><ul><li>模型厂商是否公开可复现的推理痕迹隔离与检测标准。</li><li>TileLang 在 Ascend 上的算子覆盖、性能数据与社区贡献速度。</li><li>HBM 长约是否继续推高服务器内存价格并挤压通用 DRAM 供给。</li></ul></div></aside>
   </section>
 
   <section id="society" class="panel">
-    <div class="section-kicker"><span>SOCIETY · POLICY · ECONOMY</span><h2>政策在降低国内融资成本，外部世界仍被能源与高利率牵动</h2><p>中国的结构性工具和首套房贴息开始落到具体额度；澳大利亚继续加息、伊朗货币再创新低，泰国洪灾则从灾情统计进入财政救助阶段。</p></div>
-    <h2 class="category">国内政策与社会治理</h2>
-    <div class="grid">
+    <div class="section-kicker"><span>SOCIETY · POLICY · ECONOMY</span><h2>基础设施风险成为今天最集中的社会变量</h2><p>电网、公共住房、政府票据系统和全球债券市场看似分散，实质都在回答同一个问题：当压力到来时，社会赖以运行的基础设施是否足够透明、可恢复并能把成本公平传导。</p></div>
+    <h2 class="category">国际局势与全球事件</h2><div class="grid">
       <article class="card hero" tabindex="0" data-story="s1">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://www.mof.gov.cn/zhengwuxinxi/" alt="财政部居民购房贷款贴息政策" onerror="fallback(this,'China Policy Package')"></div>
-        <div class="card-copy"><span class="label">MONETARY POLICY · HOUSING</span><h3>央行定向降息与全国首套房贴息同时落地，政策开始直达投资和家庭月供</h3><p class="summary">一年期 PSL 利率由 1.75% 降至 1.5%，科技技改再贷款额度增至 1.4 万亿元；10 月 1 日起，符合条件的新发首套房商贷可获年化 1 个百分点、最长 5 年贴息。两组工具分别指向项目融资与刚需购房。</p><div class="meta">中国人民银行 · 财政部 · Reuters · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://www.reuters.com/world/europe/russian-air-strikes-kill-one-injure-five-around-kyiv-officials-say-2026-09-30/" alt="Ukraine Energy Grid" onerror="fallback(this,'Ukraine Energy Grid')"></div>
+        <div class="card-copy"><span class="label">UKRAINE · ENERGY SECURITY</span><h3>俄军对乌克兰能源系统发动数月来最大规模联合袭击，冬季风险提前显性化</h3><p class="summary">乌方称 9 月 30 日袭击造成 7 人死亡，基辅及周边首次自春季以来实施紧急停电，公共交通与供水受扰；285 架无人机中 254 架被拦截，但更快的喷气式无人机增加防空压力。事件的现实影响已从战线延伸到取暖、电力和城市基本服务。</p><div class="meta">Reuters · Ukrenergo · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
     </div>
-    <h2 class="category">金融与宏观经济</h2>
-    <div class="grid">
+    <h2 class="category">金融与宏观经济</h2><div class="grid">
       <article class="card" tabindex="0" data-story="s2">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://www.rba.gov.au/media-releases/2026/mr-26-27.html" alt="澳大利亚央行利率决议" onerror="fallback(this,'RBA Rate Decision')"></div>
-        <div class="card-copy"><span class="label">GLOBAL RATES · AUSTRALIA</span><h3>澳大利亚加息至 4.60%，能源与 AI 设备需求成为新的通胀变量</h3><p class="summary">澳洲联储 9 月 29 日加息 25 个基点，现金利率升至约 15 年高位。官方将中东能源价格、AI 相关技术商品需求和国内产能压力并列为上行风险。住房走弱、增长放缓仍未阻止加息，显示全球降息预期继续后移。</p><div class="meta">Reserve Bank of Australia · Reuters · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://www.reuters.com/world/china/global-markets-q3-analysis-pix-2026-09-30/" alt="Global Bond Reset" onerror="fallback(this,'Global Bond Reset')"></div>
+        <div class="card-copy"><span class="label">GLOBAL MARKETS · BONDS</span><h3>全球股市仍接近高位，债券却在第三季度完成了一次危险的重新定价</h3><p class="summary">全球主要股票指数今年仍涨逾 12%，但美国 10 年期国债收益率突破 5%，日本与欧洲多国长债收益率也触及十多年高位；布伦特原油季度涨约 40%。股票盈利预期暂时抵消了融资成本冲击，但“无风险利率”上升正在重估房贷、企业债与高估值资产。</p><div class="meta">Reuters · 市场数据 · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
     </div>
-    <h2 class="category">国际局势与全球事件</h2>
-    <div class="grid">
+    <h2 class="category">民生与公共服务</h2><div class="grid">
       <article class="card" tabindex="0" data-story="s3">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://apnews.com/article/91de6619aca2e1a9a32757166eae98d0" alt="伊朗货币创历史新低" onerror="fallback(this,'Iran Rial')"></div>
-        <div class="card-copy"><span class="label">IRAN · CURRENCY &amp; ENERGY</span><h3>伊朗里亚尔跌破每美元 250 万，战争成本继续向民生和能源市场传导</h3><p class="summary">里亚尔 9 月 29 日再创历史低位，较 9 月 2 日的前纪录进一步贬值；制裁、海上封锁与持续冲突压缩外汇来源。卡塔尔和巴基斯坦正推动间接谈判，但美伊对制裁解除与霍尔木兹海峡安排仍无共识。</p><div class="meta">AP · Reuters · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://www.mof.gov.cn/jrttts/202601/t20260122_3982354.htm" alt="Cross-Province E-Receipts" onerror="fallback(this,'Cross-Province E-Receipts')"></div>
+        <div class="card-copy"><span class="label">PUBLIC SERVICE · DIGITAL RECEIPTS</span><h3>财政电子票据跨省报销今天进入试运行，异地医疗与教育缴费少一道纸面关卡</h3><p class="summary">按照财政部既定安排，跨省报销系统在 9 月底完成建设后，于 10 月 1 日至 12 月 31 日进入试运行。电子票据可跨地区查验和流转，直接影响异地就医、教育收费及行政事业缴费报销；真正成效取决于单位财务系统接入和失败票据的人工兜底。</p><div class="meta">财政部 · 2026-10-01</div><span class="read">阅读全文 →</span></div>
       </article>
     </div>
-    <h2 class="category">公共安全与社会事件</h2>
-    <div class="grid">
+    <h2 class="category">公共安全与社会事件</h2><div class="grid">
       <article class="card" tabindex="0" data-story="s4">
-        <div class="card-media"><img src="https://image.thum.io/get/width/1000/crop/560/https://apnews.com/article/dddbc71065105886b1fdadba8683bd23" alt="泰国洪灾紧急救助" onerror="fallback(this,'Thailand Flood Aid')"></div>
-        <div class="card-copy"><span class="label">FLOOD · EMERGENCY AID</span><h3>泰国洪灾新增关键信息：政府批准 41 亿泰铢援助，受影响人数升至 260 万</h3><p class="summary">这不是对昨日曼谷积水的重复报道：9 月 29 日新增的是全国援助规模、受灾人口与死亡数字。政府批准约 1.22 亿美元紧急资金，至少 19 人死亡；首都降雨虽减弱，但部分道路、航班和行李系统仍需数日恢复。</p><div class="meta">AP · Reuters · 2026-09-29</div><span class="read">阅读全文 →</span></div>
+        <div class="card-media"><img src="https://image.thum.io/get/width/1200/crop/650/https://apnews.com/article/venezuela-la-guaira-apartments-collapse-earthquake-596380b06d00a8c4832081b4d43677fe" alt="Venezuela Housing Inquiry" onerror="fallback(this,'Venezuela Housing Inquiry')"></div>
+        <div class="card-copy"><span class="label">PUBLIC HOUSING · EARTHQUAKE</span><h3>AP 调查还原委内瑞拉住宅塔楼倒塌：风险早被识别，却没有进入工程决策</h3><p class="summary">6 月 24 日两次强震导致拉瓜伊拉至少 14 栋公屋塔楼倒塌、逾 6500 人死亡。9 月 30 日发布的新调查通过工程师、地震学家和前官员访谈指出，松散土层、断层与洪灾历史早有警示，但蓝图、土壤研究和验收记录至今未公开，重建仍缺乏透明问责。</p><div class="meta">AP 调查 · 2026-09-30</div><span class="read">阅读全文 →</span></div>
       </article>
     </div>
-    <aside class="closing">
-      <div><h3>今日社会观察</h3><ul><li>国内政策从宏观表态进入可计算的利率、额度和贴息条件。</li><li>结构性宽松优先覆盖科技、技改、小微与刚需住房，而非无差别放水。</li><li>全球高利率与能源冲击仍在相互强化，亚洲货币和家庭贷款成本承压。</li><li>泰国洪灾由城市积水扩展为全国财政救助与公共服务恢复问题。</li></ul></div>
-      <div><h3>今天最值得持续关注</h3><p>首套房贴息是否真正转化为刚需家庭的成交与月供下降。政策条件明确，但 150 万元总价上限意味着受益程度会高度依赖城市层级和房源结构。</p><h3>后续指标</h3><ul><li>10 月 1 日后各银行“免申即享”的实际办理口径。</li><li>中国 PMI、投资与房地产成交能否验证政策效果。</li><li>中东谈判、油价与全球长债收益率的联动方向。</li></ul></div>
-    </aside>
+    <aside class="closing"><div><h3>今日社会观察</h3><ul><li>战争对平民的影响再次集中到电力、供水、交通和冬季取暖。</li><li>高油价与长端利率同时上升，全球经济面对的是融资成本与生活成本双重压力。</li><li>数字公共服务的价值不在“上线”，而在跨地区互认和异常情况下能否顺利报销。</li><li>委内瑞拉震灾调查把伤亡原因从自然灾害追溯到选址、规范执行与信息公开。</li></ul></div><div><h3>今天最值得持续关注的一件事</h3><p>乌克兰关键能源设施的备份能力。袭击已在低温到来前造成紧急停电，接下来几周的修复速度、分布式发电和防空资源，将直接决定城市基本服务能否稳定。</p><h3>后续指标</h3><ul><li>乌克兰停电范围、修复周期与夜间低温变化。</li><li>美国 10 年期收益率能否稳定在 5% 附近及其对信用市场的传导。</li><li>跨省电子票据试运行的接入地区、失败率与报销时长。</li></ul></div></aside>
   </section>
   <footer>AUHYUAN DAILY · 独立筛选、交叉验证、事实与分析分开呈现</footer>
 </main>
@@ -111,78 +101,14 @@ footer{text-align:center;border-top:1px solid var(--ink);margin-top:42px;padding
   <div class="reader" role="dialog" aria-modal="true" aria-labelledby="reader-title">
     <div class="reader-nav"><button class="nav-button" id="top-prev">← 上一篇</button><span id="counter">1 / 1</span><button class="close" id="close" aria-label="关闭">×</button></div>
 
-    <article data-id="t1">
-      <span class="article-label">AI · ALWAYS-ON AGENT</span><h2 id="reader-title">OpenAI 用 Dots 把 Agent 从一次对话变成持续运行的工作单元</h2><div class="article-meta">2026-09-29 · OpenAI · Reuters · Axios</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://devday.openai.com/" alt="" onerror="fallback(this,'OpenAI DevDay 2026')">
-      <h3>发生了什么</h3><p>OpenAI 在 DevDay 2026 集中发布超过 20 项产品与平台更新。最重要的是 Dots：一类长期在线、拥有独立云端电脑的 Agent，可跨浏览器和数千个连接应用持续执行目标，并通过 ChatGPT、语音或协作工具接受指令。首批面向 Pro、Business 和 Enterprise 用户。公司同时发布团队协作空间 ChatGPT Space、用于自动化重复业务判断的 Decisions API，以及更广泛的云端 Codex 能力。</p>
-      <h3>模型与成本层的变化</h3><p>GPT-6.1 Sol 被定位为主力模型升级版，官方称它在多项能力上接近或部分超过 Astra，但 token 价格约为 Astra 标准价格的五分之一。OpenAI 还公布更高价的 Ultrafast 速度层。把持久在线 Agent 与更便宜的主力模型放在同一天发布，说明竞争单位正从“每次调用价格”转向“完成并维护一个长期任务的总成本”。</p>
-      <h3>为什么重要</h3><p>一次性对话只需处理当前输入；持续 Agent 则必须管理状态、权限、失败恢复和行为审计。它能带来持续跟踪项目、跨应用整理和后台执行的价值，也会放大错误授权、提示注入和误操作风险。OpenAI 在安全材料中为 Dots 增补了专门说明，但真实工作环境中的长时间行为仍需要外部验证。</p>
-      <h3>对读者的现实价值</h3><p>早期使用时应从可撤销、只读或低损失任务开始，为每个 Dot 划定应用、数据和预算边界，并要求关键写操作确认。评估指标应包括任务完成率、人工接管次数、越权拦截和一周总成本，而不是只看演示是否顺畅。</p>
-      <div class="sources"><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">OpenAI API Changelog ↗</a><a href="https://deploymentsafety.openai.com/gpt-6-astra/evaluating-auto-review" target="_blank" rel="noopener">OpenAI 安全材料 ↗</a><a href="https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/" target="_blank" rel="noopener">Reuters ↗</a></div>
-    </article>
-    <article data-id="t2">
-      <span class="article-label">SECURITY · WEB PKI</span><h2>Cloudflare 申请成为公共 CA，并把后量子证书推向浏览器信任链</h2><div class="article-meta">2026-09-29 · Cloudflare · IETF</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://blog.cloudflare.com/cloudflare-certificate-authority/" alt="" onerror="fallback(this,'Post-Quantum CA')">
-      <h3>发生了什么</h3><p>Cloudflare 宣布申请成为公共证书机构，除传统证书外，计划支持 Merkle Tree Certificates（MTC）。目标是在 2027 年第一季度签发首批证书，并进入 Chrome 新设的抗量子根证书库。它还将采用 ACME 优先的自动化签发方式，把短周期、自动轮换作为默认设计。</p>
-      <h3>必要背景</h3><p>后量子签名通常比现有椭圆曲线签名大得多，直接塞进每张 X.509 证书会增加 TLS 握手、证书透明日志和存储开销。MTC 把一批证书组织成 Merkle 树，对树根签名，单张证书携带较小的包含证明，从而在保持可验证性的同时减少重复的大签名。该方案仍处于 IETF 标准化过程中。</p>
-      <h3>为什么重要</h3><p>网站到浏览器的加密已有后量子密钥交换，但身份认证链仍可能依赖传统签名。若公共 CA、浏览器根库与自动化证书工具能协同，网站管理员才可能在不重建整套部署的前提下迁移。Cloudflare 同时拥有大规模 TLS 流量和证书自动化经验，因此这不是纯研究演示，而是现实部署信号。</p>
-      <h3>风险与观察点</h3><p>申请成为公共 CA 需要长期审计和浏览器信任审批，MTC 也依赖客户端支持，2027 时间表并非既成事实。使用证书固定、OCSP 或自建 PKI 的团队应跟踪标准和浏览器实现，不宜提前假定现有工具完全兼容。</p>
-      <div class="sources"><a href="https://blog.cloudflare.com/cloudflare-certificate-authority/" target="_blank" rel="noopener">Cloudflare CA 公告 ↗</a><a href="https://blog.cloudflare.com/pq-ca-with-mtcs/" target="_blank" rel="noopener">MTC 技术说明 ↗</a><a href="https://datatracker.ietf.org/doc/html/draft-ietf-plants-merkle-tree-certs-06" target="_blank" rel="noopener">IETF 草案 ↗</a></div>
-    </article>
-    <article data-id="t3">
-      <span class="article-label">DEVOPS · GOVERNANCE</span><h2>GitHub 允许 CMDB 成为仓库属性的唯一事实源</h2><div class="article-meta">2026-09-29 · GitHub Changelog</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties/" alt="" onerror="fallback(this,'GitHub Governance')">
-      <h3>发生了什么</h3><p>GitHub 将 external custom properties 推入公开预览。企业可以通过 API 从 CMDB、内部开发者门户或自建系统同步仓库所有者、服务等级、生命周期、合规状态等字段。这些外部属性在 GitHub 界面中只读，并拥有独立命名空间，避免用户手工修改后与源系统冲突。</p>
-      <h3>这件事到底意味着什么</h3><p>过去许多团队在 CMDB、Backstage 类门户、仓库 topic 和表格中重复维护同一份元数据，漂移后便难以判断哪个系统可信。新机制允许外部系统保持唯一事实源，同时让 GitHub 用这些字段做仓库筛选、视图和 ruleset 定向，治理规则因此可以跟随业务上下文自动变化。</p>
-      <h3>为什么重要</h3><p>当企业拥有数百或数千仓库时，安全要求不能只按组织或仓库名粗粒度配置。生产一级服务、含个人数据的仓库、即将退役的组件应有不同的审批、扫描与分支保护策略。外部属性把架构目录中的业务语义带进代码平台，减少人工名单和脚本硬编码。</p>
-      <h3>可执行机会</h3><p>先选 owner、tier、lifecycle 三个字段做最小试点，校验同步幂等、删除语义和权限；随后用只读查询核对覆盖率，再逐步绑定 ruleset。不要一开始就把阻断性策略挂在尚未清洗的 CMDB 数据上。</p>
-      <div class="sources"><a href="https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties/" target="_blank" rel="noopener">GitHub 原始发布 ↗</a></div>
-    </article>
-    <article data-id="t4">
-      <span class="article-label">BATTERY · INDUSTRIALIZATION</span><h2>GM 与 LG 把 LMR 方形电池路线送进田纳西工厂改造</h2><div class="article-meta">2026-09-29 · General Motors · Reuters</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/sep/0929-ultium-cells-lmr-tennessee.html" alt="" onerror="fallback(this,'LMR Battery')">
-      <h3>发生了什么</h3><p>GM 与 LG Energy Solution 的合资公司 Ultium Cells 宣布，位于田纳西州 Spring Hill 的工厂将在 2026 年内启动改造，用于生产富锂锰（LMR）方形电芯，服务未来 GM 电动车。两家公司此前已宣布商业化路线，今天的新信息是具体制造基地和产线转换进入执行阶段。</p>
-      <h3>技术与成本逻辑</h3><p>LMR 通过提高锰比例、减少昂贵的镍和钴，目标是在接近磷酸铁锂成本下获得更高能量密度。GM 此前称其能量密度可比表现最好的 LFP 电芯高约 33%；方形结构还可减少电池包零件数量。它尤其适合需要续航和承载能力的大型 SUV 与皮卡。</p>
-      <h3>为什么重要</h3><p>电动车降价不能只靠整车补贴，电芯材料和封装结构必须同时降本。把 LMR 带入现有合资工厂意味着北美供应链开始为多化学体系生产做准备，也降低对高镍路线的单一依赖。对中国电池产业而言，这是一条需要持续跟踪的海外差异化路线。</p>
-      <h3>不确定性</h3><p>产线改造不等于已实现稳定量产。LMR 的循环寿命、热稳定性、良率和真实成本仍需在大规模制造与整车使用中验证，商业生产节点也可能随需求和设备调试调整。</p>
-      <div class="sources"><a href="https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/sep/0929-ultium-cells-lmr-tennessee.html" target="_blank" rel="noopener">GM 原始公告 ↗</a><a href="https://www.reuters.com/business/autos-transportation/gm-lg-make-lower-cost-ev-battery-cells-tennessee-2026-09-29/" target="_blank" rel="noopener">Reuters ↗</a></div>
-    </article>
-    <article data-id="s1">
-      <span class="article-label">MONETARY POLICY · HOUSING</span><h2>央行定向降息与全国首套房贴息同时落地，政策开始直达投资和家庭月供</h2><div class="article-meta">2026-09-29 · 中国人民银行 · 财政部 · Reuters</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://www.mof.gov.cn/zhengwuxinxi/" alt="" onerror="fallback(this,'China Policy Package')">
-      <h3>发生了什么</h3><p>中国人民银行宣布调整多项结构性货币工具：一年期抵押补充贷款（PSL）利率从 1.75% 降至 1.5%，科技创新和技术改造再贷款额度由 1.2 万亿元增至 1.4 万亿元，支农支小再贷款增加 5,000 亿元至 4.85 万亿元，民营企业再贷款增加 3,000 亿元至 1.3 万亿元。政策意图是把更低成本资金定向导入基建、科技、小微和民营经济。</p>
-      <h3>首套房贴息如何执行</h3><p>财政部、央行和金融监管总局同时推出全国性居民购房贷款贴息。自 10 月 1 日起暂行一年，新发放的符合条件首套住房商业贷款，可按贷款本金获得年化 1 个百分点、最长 5 年的贴息，单户享受贴息的贷款本金上限 100 万元。住房建筑面积不超过 120 平方米、总价不超过 150 万元，存量贷款置换不在范围内。</p>
-      <h3>这意味着什么</h3><p>两组政策分别作用于供给侧项目融资和需求侧家庭月供，体现财政与货币政策协同。以 100 万元符合条件贷款计算，理论贴息上限接近每年 1 万元、最长 5 年，但实际金额随剩余本金下降。总价门槛使政策更偏向三四线城市、新市民和青年刚需，而非一线城市主流住宅。</p>
-      <h3>对读者的现实价值与风险</h3><p>准备购房者应确认网签价格、面积、首套认定和贷款发放日期，并让银行在合同中明确贴息比例、期限及扣减方式。贴息降低成本，但不改变房屋流动性、交付和区域人口趋势；不应仅因补贴提前承担超出偿付能力的长期负债。</p>
-      <div class="sources"><a href="https://www.mof.gov.cn/zhengwuxinxi/" target="_blank" rel="noopener">财政部政策入口 ↗</a><a href="https://www3.xinhuanet.com/fortune/20260929/2a939258069e4e768a06ffdc04e11eed/c.html" target="_blank" rel="noopener">央行政策原文 / 新华社 ↗</a><a href="https://www.reuters.com/world/asia-pacific/china-unveils-rate-cut-mortgage-subsidies-spur-growth-2026-09-29/" target="_blank" rel="noopener">Reuters ↗</a></div>
-    </article>
-    <article data-id="s2">
-      <span class="article-label">GLOBAL RATES · AUSTRALIA</span><h2>澳大利亚加息至 4.60%，能源与 AI 设备需求成为新的通胀变量</h2><div class="article-meta">2026-09-29 · Reserve Bank of Australia · Reuters</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://www.rba.gov.au/media-releases/2026/mr-26-27.html" alt="" onerror="fallback(this,'RBA Rate Decision')">
-      <h3>发生了什么</h3><p>澳大利亚储备银行将现金利率目标上调 25 个基点至 4.60%，为约 15 年高位。官方声明称，近期通胀高于此前预期，中东冲突推高能源价格，AI 相关需求带动技术商品价格快速上涨，国内企业也在把成本压力转嫁给消费者。</p>
-      <h3>矛盾在哪里</h3><p>澳大利亚产出增长已经放缓，消费支出逐渐降温，多数首府城市房价下跌，新住房贷款明显减少。但央行仍选择加息，说明其更担心通胀预期固化。全球市场同日出现美国长期国债收益率维持高位、美元走强，而短端加息预期又因美联储官员表态波动的分化。</p>
-      <h3>为什么重要</h3><p>澳大利亚是一个对住房贷款和大宗商品高度敏感的经济体，此次决定显示能源冲击足以压过部分增长疲弱信号。对亚洲市场而言，更高美元利率与能源进口成本会共同挤压货币和政策空间；对澳洲家庭，浮动房贷、租金和企业融资成本仍将承压。</p>
-      <h3>接下来观察</h3><p>关注后续 CPI、工资与能源价格是否继续高于预测，以及住房贷款和消费是否出现更明显收缩。单次加息并不必然代表连续加息，但官方明确保留进一步行动空间。</p>
-      <div class="sources"><a href="https://www.rba.gov.au/media-releases/2026/mr-26-27.html" target="_blank" rel="noopener">澳洲联储声明 ↗</a><a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-09-29/" target="_blank" rel="noopener">Reuters 全球市场 ↗</a></div>
-    </article>
-    <article data-id="s3">
-      <span class="article-label">IRAN · CURRENCY &amp; ENERGY</span><h2>伊朗里亚尔跌破每美元 250 万，战争成本继续向民生和能源市场传导</h2><div class="article-meta">2026-09-29 · AP · Reuters</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://apnews.com/article/91de6619aca2e1a9a32757166eae98d0" alt="" onerror="fallback(this,'Iran Rial')">
-      <h3>发生了什么</h3><p>德黑兰市场的里亚尔跌至每美元 250 万以上，再创历史低位。前一纪录是 9 月 2 日约 220 万，意味着不到一个月再次显著贬值。长期制裁之外，持续冲突、海上封锁和新增军事供应链制裁进一步压缩贸易与外汇来源。</p>
-      <h3>外交进展与分歧</h3><p>卡塔尔和巴基斯坦正推动美伊间接谈判，议题包括霍尔木兹海峡和核问题。伊朗提出以重开海峡和短期停火换取制裁缓解，美国总统则否认已提出解除制裁或解冻资金。各方仍在接触，但公开表态没有形成可执行协议。</p>
-      <h3>现实影响</h3><p>本币急跌会迅速抬高进口食品、药品和工业原料成本，侵蚀工资与储蓄，并推动居民转向美元、黄金或实物资产。区域层面，谈判与冲突直接影响海湾原油运输和保险价格；尽管 9 月 29 日油价因部分出口恢复而回落，供应风险溢价并未消失。</p>
-      <h3>不确定性</h3><p>自由市场汇率与官方汇率并不相同，战时信息也存在延迟。判断局势应同时观察海峡通航、制裁执行、实际原油出口与正式谈判文本，而不是把单日汇率或口头表态视为转折。</p>
-      <div class="sources"><a href="https://apnews.com/article/91de6619aca2e1a9a32757166eae98d0" target="_blank" rel="noopener">AP ↗</a><a href="https://www.reuters.com/world/middle-east/trump-denies-offering-iran-sanctions-relief-tehran-says-ready-talks-2026-09-29/" target="_blank" rel="noopener">Reuters ↗</a></div>
-    </article>
-    <article data-id="s4">
-      <span class="article-label">FLOOD · EMERGENCY AID</span><h2>泰国洪灾新增关键信息：政府批准 41 亿泰铢援助，受影响人数升至 260 万</h2><div class="article-meta">2026-09-29 · AP · Reuters</div>
-      <img class="article-image" src="https://image.thum.io/get/width/1400/crop/720/https://apnews.com/article/dddbc71065105886b1fdadba8683bd23" alt="" onerror="fallback(this,'Thailand Flood Aid')">
-      <h3>今天新增了什么</h3><p>泰国政府批准 41 亿泰铢、约 1.22 亿美元紧急援助，用于覆盖 9 月中旬以来洪灾影响的 260 多万人。最新统计显示至少 19 人死亡，其中 4 人在曼谷。相比昨日以曼谷降雨和 58 万余户受灾为主的信息，今天的增量是全国受灾人口、死亡数字和财政救助正式落地。</p>
-      <h3>公共服务仍在恢复</h3><p>曼谷降雨大体减弱，但低洼社区和部分道路仍需数日退水。素万那普机场出现航班取消和大量行李积压，泰航与空军参与处置。泰国其他地区仍有强降雨，邻国缅甸和柬埔寨也报告滑坡、死亡和大规模家庭受影响。</p>
-      <h3>为什么重要</h3><p>救助金额只是第一阶段支出，后续还有住房、道路、商业停摆和旅游损失。对于依赖曼谷航空枢纽和区域陆路运输的企业，延误会沿供应链扩散；对居民，现金救助速度、临时安置和饮水卫生比总额更关键。</p>
-      <h3>现实建议与不确定性</h3><p>近期前往泰国应以机场、航空公司和当地防灾部门通知为准，预留转运行李和道路延误时间。受灾企业应保存停工、货损和物流凭证。灾情仍在统计，人数与损失可能继续上调。</p>
-      <div class="sources"><a href="https://apnews.com/article/dddbc71065105886b1fdadba8683bd23" target="_blank" rel="noopener">AP ↗</a><a href="https://www.reuters.com/sustainability/fatal-floods-hit-india-nepal-thailand-2026-09-29/" target="_blank" rel="noopener">Reuters 区域洪灾 ↗</a></div>
-    </article>
+    <article data-id="t1"><span class="article-label">AI SECURITY · MODEL EXTRACTION</span><h2 id="reader-title">OpenAI 披露大规模“对抗性蒸馏”：模型交互层本身已成为攻击面</h2><div class="article-meta">2026-09-30 · OpenAI · 独立安全报道</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://openai.com/news/" alt="" onerror="fallback(this,'AI Model Security')"><h3>发生了什么</h3><p>OpenAI 9 月 30 日披露，它在 7 月识别并阻断一场试图从模型交互中提取“受保护推理”的协同行动。公司称 7 月 24 日和 25 日的高峰包含约 1.6 万次相关请求、来自 4000 多个用户，更广泛的相似提示模式涉及逾 1.5 万个账户。它把核心活动簇归因于与 Moonshot AI 有关联的个人，但同时明确：无法确认所有操作者属于同一主体。</p><h3>这不是传统数据泄露</h3><p>公开说法是，攻击者没有突破数据库或直接访问用户保存的对话，而是利用跨会话回放、加密推理状态和模型输出处理中的弱点，尝试让模型复现本不应暴露的中间推理。OpenAI 称已关闭一条可回放他人加密推理并恢复内容的路径，并加强账户、流式输出和跨模型检测。相关请求数代表尝试，不等同于成功提取量。</p><h3>为什么重要</h3><p>大模型安全边界正在从账号、API 密钥和数据库扩展到中间状态。高质量推理轨迹可能被用于训练另一个系统，却不会自动继承原模型的安全约束。对于构建有状态 Agent 的团队，这意味着加密状态并非可以随意在会话、用户或服务间复制的普通缓存；授权范围、绑定关系、重放保护和异常调用检测必须进入架构设计。</p><h3>不确定性</h3><p>目前核心证据来自 OpenAI 自身遥测，外界无法独立审计完整归因，也没有公开证据证明某个已发布模型使用了这批数据。负责任的结论是：攻击路径和防御动作已被披露，但归因范围、成功率及实际能力转移程度仍不确定。</p><div class="sources"><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI 安全发布入口 ↗</a><a href="https://www.brocker.org/openai-disrupts-model-distillation-campaign-moonshot-attribution" target="_blank" rel="noopener">独立梳理 ↗</a></div></article>
+    <article data-id="t2"><span class="article-label">AI CHIPS · OPEN SOURCE</span><h2>DeepSeek 与华为把 Ascend 950 的计算、通信与 TileLang 工具链开源</h2><div class="article-meta">2026-09-30 · DeepSeek · TileLang · Reuters</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://github.com/tile-ai/tilelang" alt="" onerror="fallback(this,'TileLang on Ascend')"><h3>发生了什么</h3><p>DeepSeek 宣布与华为合作，为 Ascend 平台开源编程基础设施，包括计算库、通信库和 TileLang 高层编程语言的 Ascend 950 后端。双方还围绕 128 颗 Ascend 950 组成的超节点协同优化计算与通信。TileLang 仓库当天列出的新能力包括原生代码生成、自动调度与同步，以及 SIMD/SIMT 编程支持。</p><h3>必要背景</h3><p>AI 芯片可用性不仅由峰值算力决定，还取决于编译器、算子库、集群通信和调试工具。CUDA 长期优势正来自这一整套软件生态。直接要求开发者手写低层内核会限制适配速度；TileLang 试图用更高层的块与张量描述生成高性能代码，让 GEMM、FlashAttention 等核心算子更容易迁移。</p><h3>这意味着什么</h3><p>如果同一语言能覆盖更多硬件，并在 Ascend 上形成稳定性能，国产算力的迁移成本可能从“重写工程”降到“调整后端”。但开源代码与硬件生态成熟仍有距离：性能分析工具、错误诊断、算子覆盖和社区维护都要经受真实训练任务验证。</p><h3>可执行机会</h3><p>已有 Ascend 环境的团队可从仓库示例复现 GEMM 或 Attention，记录生成代码、通信效率与端到端吞吐，而不是只看微基准。评估时同时保留现有框架基线，并检查许可证、版本锁定和生产支持边界。</p><div class="sources"><a href="https://github.com/tile-ai/tilelang" target="_blank" rel="noopener">TileLang 仓库 ↗</a><a href="https://www.reuters.com/world/asia-pacific/deepseek-partners-with-huawei-develop-chip-programming-tools-reducing-reliance-2026-09-30/" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+    <article data-id="t3"><span class="article-label">SEMICONDUCTOR · MEMORY</span><h2>美光季度收入近四倍增长，客户用 320 亿美元承诺提前锁定内存</h2><div class="article-meta">2026-09-30 · Micron · Reuters · WSJ</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://investors.micron.com/" alt="" onerror="fallback(this,'Micron AI Memory')"><h3>发生了什么</h3><p>美光第四财季收入 542.3 亿美元，接近去年同期的四倍，并高于市场预期；调整后每股收益 33.42 美元。公司预计下一财季收入约 615 亿美元，也高于分析师平均预期。更关键的是，客户在长期供货协议下的财务承诺由 6 月的 220 亿美元增至 320 亿美元，多数是现金押金，剩余履约义务约 1500 亿美元。</p><h3>供给为何难以迅速增加</h3><p>HBM 需要更多晶圆面积和先进封装，扩建晶圆厂又经历设备到位、良率爬坡和客户认证。美光称 2027 年大部分 HBM 产出已经签约，新厂最早要到 2027 年中产生首批晶圆，形成有意义供给还需数个季度。长期承诺因此既是需求信号，也是客户为避免断供支付的保险。</p><h3>为什么重要</h3><p>AI 基建竞争正在把压力从 GPU 传向内存、存储和封装。高额预付款能帮助厂商扩产，却也可能挤压通用 DRAM 与 NAND 的资本配置，最终传导到服务器、PC 和云服务成本。对投资者而言，强订单可见度降低短期不确定性，但也提高了周期反转时的产能风险。</p><h3>接下来观察</h3><p>关注 2027 年资本开支、HBM 良率、长期协议是否包含价格保护，以及三星、SK 海力士新增产能何时兑现。单季高速增长不能证明供需紧张永久持续。</p><div class="sources"><a href="https://investors.micron.com/" target="_blank" rel="noopener">Micron 投资者关系 ↗</a><a href="https://www.reuters.com/business/micron-forecasts-quarterly-revenue-above-estimates-2026-09-30/" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+    <article data-id="t4"><span class="article-label">AGENT INFRA · CONTROL PLANE</span><h2>Cloudflare 同日补齐 Agent 的沙箱、模型路由与按调用付费</h2><div class="article-meta">2026-09-30 · Cloudflare</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://blog.cloudflare.com/agentic-web/" alt="" onerror="fallback(this,'Cloudflare Agent Web')"><h3>发生了什么</h3><p>Cloudflare 在同一天发布三组互相关联的能力。重构后的 Containers 为 Agent 提供更快启动、运行时镜像与实例选择、文件系统快照；AI Gateway Auto Router 在边缘判断请求复杂度，在质量与 token 成本之间选择模型；Monetization Gateway 则把 HTTP 402 与 x402 支付接入网站、API、数据源和 MCP 工具，让资源提供者可按 URL、请求头或参数定价。</p><h3>这件事到底意味着什么</h3><p>Agent 落地需要的不只是模型调用。能执行代码的 Agent 要隔离环境和持久化状态；多模型应用需要统一预算、路由与观测；开放工具生态还要回答谁为调用付费。Cloudflare 把这三层放进同一控制面，目标是让 Agent 请求像普通 Web 流量一样被调度、计量与结算。</p><h3>为什么重要</h3><p>若 HTTP 402 类协议形成可互操作生态，内容与工具提供者不必只依赖广告或订阅，也可向机器消费者按次收费；自动路由则可能让成本优化从应用代码移到基础设施层。但这会引入新的供应链风险：错误路由可能降低质量，自动付费需要强预算上限，沙箱快照也可能保存敏感凭证。</p><h3>风险与行动</h3><p>这些能力仍含 beta 或迁移期。准备试用的团队应先在非生产流量上验证模型选择、冷启动、账单与失败重试；给 Agent 钱包设置单次和每日限额，并将密钥与文件快照分离。旧 Container/Sandbox 类到 2026 年底停止更新，现有用户需评估迁移。</p><div class="sources"><a href="https://blog.cloudflare.com/faster-agent-sandboxes/" target="_blank" rel="noopener">Containers ↗</a><a href="https://blog.cloudflare.com/auto-router/" target="_blank" rel="noopener">Auto Router ↗</a><a href="https://blog.cloudflare.com/monetization-gateway-beta/" target="_blank" rel="noopener">Monetization Gateway ↗</a></div></article>
+    <article data-id="s1"><span class="article-label">UKRAINE · ENERGY SECURITY</span><h2>俄军对乌克兰能源系统发动数月来最大规模联合袭击，冬季风险提前显性化</h2><div class="article-meta">2026-09-30 · Reuters · Ukrenergo</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://www.reuters.com/world/europe/russian-air-strikes-kill-one-injure-five-around-kyiv-officials-say-2026-09-30/" alt="" onerror="fallback(this,'Ukraine Energy Grid')"><h3>发生了什么</h3><p>俄罗斯 9 月 30 日对乌克兰能源和其他关键基础设施发动数月来最大规模的联合空袭。乌方称全国 7 人死亡，其中包括一名儿童；基辅和周边三地实施紧急停电，这是首都自春季以来首次采取这一措施。部分电车与无轨电车停运，供水压力下降，至少十个地区报告关键设施受损。</p><h3>攻击方式为何更难应对</h3><p>乌克兰空军称，当天截至傍晚拦截 285 架无人机中的 254 架，但其中 174 架是飞得更高、速度更快的喷气式型号，另有弹道导弹参与。持续十多个小时的空袭警报和多轮攻击，会迫使防空系统分散弹药与注意力；无人机还越界进入摩尔多瓦，罗马尼亚和波兰一度出动战机。</p><h3>现实影响</h3><p>夜间低温即将到来，电力系统同时支撑取暖、供水、通信和交通。电站受损不只造成短期停电，还可能让维修设备、变压器和防空资源在整个冬季持续紧张。乌方已要求地方检查医院等关键设施的备用电源并加快安装，但城市避难所不足仍是公开短板。</p><h3>不确定性</h3><p>交战双方对目标和战果说法不同，现场损失仍在核实。判断风险应跟踪 Ukrenergo 的停电范围、维修周期、气温与跨境电力能力，而不是只看拦截比例。</p><div class="sources"><a href="https://www.reuters.com/world/europe/russian-air-strikes-kill-one-injure-five-around-kyiv-officials-say-2026-09-30/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://ua.energy/" target="_blank" rel="noopener">Ukrenergo ↗</a></div></article>
+    <article data-id="s2"><span class="article-label">GLOBAL MARKETS · BONDS</span><h2>全球股市仍接近高位，债券却在第三季度完成了一次危险的重新定价</h2><div class="article-meta">2026-09-30 · Reuters · 市场数据</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://www.reuters.com/world/china/global-markets-q3-analysis-pix-2026-09-30/" alt="" onerror="fallback(this,'Global Bond Reset')"><h3>发生了什么</h3><p>第三季度结束时，全球主要股票指数仍距历史高位约 2%，年内涨幅超过 12%，但债券市场出现多年少见的下跌。美国 10 年期国债收益率突破 5%，升至 2007 年金融危机前以来最高；日本、德国、法国和英国的长期收益率也触及十多年高位。与此同时，布伦特原油季度涨约 40%、年内涨约 70%。</p><h3>为何股债分化</h3><p>股票由 AI 相关盈利和企业利润预期支撑，标普 500 年度盈利被预计增长至少 30%；债券却要消化高油价、通胀黏性、财政供给和继续加息的可能。传统组合中，政府债券本应在风险时期提供缓冲，但当通胀和期限溢价上升时，债券与股票可能同时承压。</p><h3>对普通人的现实影响</h3><p>10 年期美债是全球定价锚。其上行会推高房贷、企业债和新兴市场美元融资成本，也会降低远期利润的现值，使高估值资产更敏感。中国投资者还需关注美元走强、人民币和黄金波动，以及外需和进口能源成本，而不能把海外债市视为孤立事件。</p><h3>接下来观察</h3><p>关键不是收益率某一天是否跌破 5%，而是通胀、财政赤字和油价是否让长端利率维持结构性高位。若信用利差同步扩大，才代表压力从安全资产重新定价传向企业偿付能力。</p><div class="sources"><a href="https://www.reuters.com/world/china/global-markets-q3-analysis-pix-2026-09-30/" target="_blank" rel="noopener">Reuters 季度市场分析 ↗</a></div></article>
+    <article data-id="s3"><span class="article-label">PUBLIC SERVICE · DIGITAL RECEIPTS</span><h2>财政电子票据跨省报销今天进入试运行，异地医疗与教育缴费少一道纸面关卡</h2><div class="article-meta">2026-10-01 · 财政部</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://www.mof.gov.cn/jrttts/202601/t20260122_3982354.htm" alt="" onerror="fallback(this,'Cross-Province E-Receipts')"><h3>今天发生了什么</h3><p>财政部此前发布的全国跨省报销安排进入新阶段：各地区和中央单位在 9 月 30 日前完成系统功能建设，从 10 月 1 日至 12 月 31 日进入试运行与完善期。目标是让财政电子票据可跨省调取、查验、入账和归档，减少报销人打印、邮寄或反复证明票据真实性。</p><h3>谁会直接受影响</h3><p>财政电子票据常见于医疗收费、教育缴费、公益捐赠以及行政事业性收费。异地就医人员、跨省学习和工作的家庭、总部统一报销的企业员工，最容易遇到票据格式不兼容或财务人员无法核验的问题。跨省互认若顺利，流程可从“个人传递证明”变成系统间验证。</p><h3>为什么重要</h3><p>数字公共服务的难点通常不是生成电子文件，而是不同地区、单位和财务软件能否承认同一份数据。此次试运行把重点推进到真实报销链路，也为后续审计和档案电子化提供统一入口。它不会自动取消单位内部审批，也不等于所有旧票据立刻兼容。</p><h3>读者可以怎么做</h3><p>近期跨省报销时，优先保留原始电子票据文件与票据代码，不要只保存截图；遇到系统无法查验，应要求经办方记录失败原因并走人工核验，而不是重复开票。单位财务部门应在试运行期检查接口、归档格式和异常回退流程。</p><div class="sources"><a href="https://www.mof.gov.cn/jrttts/202601/t20260122_3982354.htm" target="_blank" rel="noopener">财政部通知 ↗</a></div></article>
+    <article data-id="s4"><span class="article-label">PUBLIC HOUSING · EARTHQUAKE</span><h2>AP 调查还原委内瑞拉住宅塔楼倒塌：风险早被识别，却没有进入工程决策</h2><div class="article-meta">2026-09-30 · AP 调查</div><img class="article-image" src="https://image.thum.io/get/width/1200/crop/650/https://apnews.com/article/venezuela-la-guaira-apartments-collapse-earthquake-596380b06d00a8c4832081b4d43677fe" alt="" onerror="fallback(this,'Venezuela Housing Inquiry')"><h3>调查新增了什么</h3><p>委内瑞拉 6 月 24 日发生 7.2 级和 7.5 级强震，造成逾 6500 人死亡、1.7 万多人无家可归，拉瓜伊拉至少 14 栋政府公屋塔楼倒塌。AP 9 月 30 日发布调查，采访数十名工程师、地震学家和前官员，追溯到 2010 年后快速兴建公屋时的选址和监管决策。</p><h3>被忽略的风险</h3><p>拉瓜伊拉靠近主要断层，部分建筑位于长期洪水和滑坡沉积形成的松散土层。专家和行业组织曾警告选址、抗震规范与材料质量，但政府至今未公开蓝图、土壤研究、检验记录等关键文件，也无法确认承建方是否完整遵循抗震标准。调查因此没有简单把伤亡归因于“超强地震”。</p><h3>为什么重要</h3><p>公屋原本用于安置受灾和低收入家庭，但赶工、土地紧缺与不透明监督可能把最脆弱人群再次暴露在风险中。灾后重建若仍缺少地质评估和公开审查，就可能复制同样的问题。这个案例提醒所有快速城市化地区：公共住房的数量目标不能替代工程责任。</p><h3>风险与不确定性</h3><p>部分记录没有公开，无法确认每栋楼的具体设计和施工缺陷；委内瑞拉政府对调查提出的核心工程问题也缺少完整回应。后续应关注独立鉴定、重建选址、幸存者安置与责任追究，而不是把调查结论扩大成对所有公屋项目的笼统判断。</p><div class="sources"><a href="https://apnews.com/article/venezuela-la-guaira-apartments-collapse-earthquake-596380b06d00a8c4832081b4d43677fe" target="_blank" rel="noopener">AP 完整调查 ↗</a></div></article>
     <div class="reader-actions"><button class="nav-button" id="bottom-prev">← 上一篇</button><button class="nav-button" id="bottom-next">下一篇 →</button></div>
   </div>
 </div>
